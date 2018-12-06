@@ -3,6 +3,7 @@
     <string name="buttonstring">RANDOMIZE</string>
     <string name="alertdialogmessage">1. Randomize the order (Shuffle)\n2. Randomly select one from the list</string>
     <string name="randomlyselected"> was randomly selected!</string>
+    <string name="listshufflemsg"> List has been shuffled</string>
     <string name="retry">RETRY</string>
     <string name="cancel">CANCEL </string>
     <string name="one">SELECT 1 </string>
@@ -11,4 +12,5 @@
     <string name="shuffle">SHUFFLE</string>
     <string name="emptylistshuffle">Add items to the list before shuffling</string>
     <string name="emptylistselectone">Add items to the list before randomly selecting one</string>
+    <string name="inputitem">Input item:</string>
 </resources>

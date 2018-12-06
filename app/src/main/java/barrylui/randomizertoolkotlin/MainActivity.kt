@@ -38,16 +38,11 @@ class MainActivity : AppCompatActivity() {
 
         // Set up ViewModel
         mViewModel = ViewModelProviders.of(this).get(MainActivityViewModel::class.java!!)
-        // Set value of livedata to List singleton
-
-        //program onChanged to display changes to the list by notifying the adapter
-        val listObserver = Observer<MutableList<String>> { mAdapter!!.notifyDataSetChanged() }
 
         //Set up observer to observe the livedata in viewmodel
+        val listObserver = Observer<MutableList<String>> { mAdapter!!.notifyDataSetChanged() }
         mViewModel.theList.observe(this, listObserver)
 
-
-        //Sets up toolbar
 
         //Deletes the list
         deleteListButton = findViewById(R.id.deleteListImageButton) as ImageButton
@@ -56,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Adds element to the list
-        addItemToListButton = findViewById(R.id.addtolistbutton) as FloatingActionButton
+        addItemToListButton = findViewById(R.id.fabaddtolistbutton) as FloatingActionButton
         addItemToListButton!!.setOnClickListener {
             //Helper method to allow user to input items
             showAddItemDialog()
@@ -71,10 +66,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 //If list is not empty, shuffle the list
                 mViewModel.shuffleList()
-                Toast.makeText(this@MainActivity, "List has been shuffled", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, getString(R.string.listshufflemsg), Toast.LENGTH_LONG).show()
             }
         }
-
+        //Randomly selects one element from the list
         randomSelectOneButton = findViewById(R.id.randomlySelectOneButton) as Button
         randomSelectOneButton!!.setOnClickListener {
             if (mViewModel.theList.value!!.isEmpty()) {
@@ -129,6 +124,7 @@ class MainActivity : AppCompatActivity() {
             mViewModel.addItemToList(inputItem)
         }.setNegativeButton(getString(R.string.cancel)) { dialogInterface, i -> dialogInterface.cancel() }
 
+        //Create the dialog
         val addItemAlertDialog = alertDialogBuilder.create()
 
         //Activate the keyboard when the dialog fragment is inflated
@@ -139,6 +135,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //helper method to randomly select item from list
     fun randomlySelectOneFromList() {
 
         //Random int to help our random selection
