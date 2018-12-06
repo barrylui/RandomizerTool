@@ -1,7 +1,8 @@
 Randomizer Tool written in Kotlin with MVVM architecture
 
 Undecisive girlfriend who doesn’t know where to eat? Trouble picking out a movie? Arguing over who gets to use the bathroom first?
-This tool helps bring users make decisions using a randomizer
+
+This tool helps users make decisions using a randomizer
 
 ![alt text](https://scontent-lga3-1.xx.fbcdn.net/v/t1.15752-9/47502915_776168912727547_856758624507133952_n.png?_nc_cat=102&_nc_ht=scontent-lga3-1.xx&oh=a96874ddf84c56aec2fe29786baaa65f&oe=5C967B71)
 ![alt text](https://scontent-lga3-1.xx.fbcdn.net/v/t1.15752-9/47482272_1936369643335540_3442324603077132288_n.png?_nc_cat=100&_nc_ht=scontent-lga3-1.xx&oh=76d1d2ab6f321e4b0f5b356bcd1fe5a1&oe=5C6B34C1)
